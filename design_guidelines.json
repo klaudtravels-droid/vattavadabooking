@@ -1,0 +1,127 @@
+{
+  "theme": "light",
+  "archetype": "Organic & Earthy",
+  "typography": {
+    "headings": {
+      "fontFamily": "Playfair Display, serif",
+      "weights": ["400", "600", "700"],
+      "styles": "Elegant, organic, serif"
+    },
+    "body": {
+      "fontFamily": "DM Sans, sans-serif",
+      "weights": ["400", "500", "600"],
+      "styles": "Clean, legible, modern"
+    },
+    "rules": {
+      "h1": "text-5xl sm:text-6xl+ tracking-tight leading-none",
+      "h2": "text-4xl sm:text-5xl tracking-tight leading-tight",
+      "h3": "text-2xl sm:text-3xl",
+      "body": "text-base sm:text-lg leading-relaxed",
+      "label": "uppercase text-xs tracking-[0.2em]"
+    }
+  },
+  "colors": {
+    "primary": {
+      "DEFAULT": "#1a3a2a",
+      "foreground": "#f0ece3"
+    },
+    "accent": {
+      "DEFAULT": "#c8922a",
+      "foreground": "#2b2b2b"
+    },
+    "background": {
+      "light": "#f5f0e8",
+      "dark": "#0d1f14",
+      "DEFAULT": "#f5f0e8"
+    },
+    "text": {
+      "light_bg": "#2b2b2b",
+      "dark_bg": "#f0ece3",
+      "DEFAULT": "#2b2b2b"
+    },
+    "border": {
+      "DEFAULT": "rgba(26, 58, 42, 0.1)",
+      "dark": "rgba(240, 236, 227, 0.1)"
+    }
+  },
+  "layout_spacing": {
+    "generous_spacing": "py-20 sm:py-32",
+    "bento_grid": "grid grid-cols-1 md:grid-cols-12 gap-6",
+    "card_padding": "p-8",
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+  },
+  "visual_style": {
+    "border_radius": "rounded-2xl",
+    "shadows": "shadow-[0_8px_32px_rgba(26,58,42,0.08)]",
+    "glassmorphism": "backdrop-blur-xl bg-[#f5f0e8]/70 border border-[#1a3a2a]/10",
+    "dark_glass": "backdrop-blur-xl bg-[#0d1f14]/80 border border-white/10",
+    "mist_effect": "CSS keyframe animations with layered translucent backgrounds for a slow-moving fog effect over the hero section."
+  },
+  "components_instructions": {
+    "navbar": "Sticky, top-0, z-50. Use glassmorphism. Transparent at the very top, transitions to frosted glass on scroll.",
+    "hero": "Full screen (min-h-screen). Absolute positioned mist layers (using Framer Motion or CSS). Dark overlay (bg-black/30) on hero image to ensure text contrast. All text in hero should be light (Cream). Main CTA to WhatsApp.",
+    "cards": "Subtle rounded corners (rounded-2xl), soft shadow, off-white parchment background. Image hover zoom (overflow-hidden, hover:scale-105).",
+    "buttons": "Primary buttons: #1a3a2a bg with #f0ece3 text. Accent buttons: #c8922a bg with #2b2b2b text. Include hover transitions.",
+    "whatsapp_fab": "Fixed bottom-right position (z-50), standard WhatsApp green or Accent gold with a soft pulse or bounce animation.",
+    "gallery": "Bento grid structure combining col-span-4, col-span-8, and row-span-2 variants to create a dynamic layout.",
+    "tabs": "For Destinations section. Use Shadcn Tabs if applicable or custom pill-shaped toggles to switch between 'Available' and 'Coming Soon'."
+  },
+  "image_urls": {
+    "hero_bg": {
+      "url": "https://images.unsplash.com/photo-1766485586335-b3ecea463aa6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwxfHx0ZWElMjBnYXJkZW4lMjBtaXN0eSUyMGhpbGxzfGVufDB8fHx8MTc3ODY5OTMwMHww&ixlib=rb-4.1.0&q=85",
+      "description": "Misty mountains and tea plantations"
+    },
+    "about_us": {
+      "url": "https://images.unsplash.com/photo-1619947603049-1cc0708f336e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHwxfHxuYXR1cmUlMjBzY2VuZXJ5JTIwbWlzdCUyMGZvcmVzdHxlbnwwfHx8fDE3Nzg2OTkzMDB8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Path in lush misty forest"
+    },
+    "destinations": [
+      {
+        "title": "Vattavada (Available)",
+        "url": "https://images.unsplash.com/photo-1663597675745-96a3f784369e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwyfHxrZXJhbGElMjB0b3VyaXNtfGVufDB8fHx8MTc3ODY5OTMwMHww&ixlib=rb-4.1.0&q=85"
+      },
+      {
+        "title": "Munnar (Coming Soon)",
+        "url": "https://images.unsplash.com/photo-1627370778723-4d26700cd972?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwzfHxrZXJhbGElMjB0b3VyaXNtfGVufDB8fHx8MTc3ODY5OTMwMHww&ixlib=rb-4.1.0&q=85"
+      },
+      {
+        "title": "Wayanad (Coming Soon)",
+        "url": "https://images.unsplash.com/photo-1766485586439-5a2550a34a2c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHw0fHx0ZWElMjBnYXJkZW4lMjBtaXN0eSUyMGhpbGxzfGVufDB8fHx8MTc3ODY5OTMwMHww&ixlib=rb-4.1.0&q=85"
+      }
+    ],
+    "stays": [
+      {
+        "type": "Pool Villa",
+        "url": "https://images.unsplash.com/photo-1636484807510-bc2ffbaf3241?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjByZXNvcnQlMjBmb3Jlc3QlMjBwb29sfGVufDB8fHx8MTc3ODY5OTMwMHww&ixlib=rb-4.1.0&q=85"
+      },
+      {
+        "type": "Premium Resort",
+        "url": "https://images.unsplash.com/photo-1684858474017-1aaaf5212fc7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwzfHxsdXh1cnklMjByZXNvcnQlMjBmb3Jlc3QlMjBwb29sfGVufDB8fHx8MTc3ODY5OTMwMHww&ixlib=rb-4.1.0&q=85"
+      },
+      {
+        "type": "Budget Stays",
+        "url": "https://images.unsplash.com/photo-1686931346464-5cf66d798b47?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwyfHxnbGFtcGluZyUyMHRlbnQlMjBmb3Jlc3R8ZW58MHx8fHwxNzc4Njk5Mjc5fDA&ixlib=rb-4.1.0&q=85"
+      },
+      {
+        "type": "Glamping Tents",
+        "url": "https://images.unsplash.com/photo-1698918160256-47c26c98ff17?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwxfHxnbGFtcGluZyUyMHRlbnQlMjBmb3Jlc3R8ZW58MHx8fHwxNzc4Njk5Mjc5fDA&ixlib=rb-4.1.0&q=85"
+      },
+      {
+        "type": "Dormitory",
+        "url": "https://images.unsplash.com/photo-1709805619372-40de3f158e83?crop=entropy&cs=srgb&fm=jpg&ixid=M3w8NjAzMzJ8MHwxfHNlYXJjaHwxfHxkb3JtaXRvcnklMjBiZWRzJTIwdHJhdmVsfGVufDB8fHx8MTc3ODY5OTI4MHww&ixlib=rb-4.1.0&q=85"
+      }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1761374985788-05b0d69689dd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwzfHx0ZWElMjBnYXJkZW4lMjBtaXN0eSUyMGhpbGxzfGVufDB8fHx8MTc3ODY5OTMwMHww&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1713627151330-a79a89005d5a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHwzfHxuYXR1cmUlMjBzY2VuZXJ5JTIwbWlzdCUyMGZvcmVzdHxlbnwwfHx8fDE3Nzg2OTkzMDB8MA&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1658334490881-d22570db0250?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHwyfHxuYXR1cmUlMjBzY2VuZXJ5JTIwbWlzdCUyMGZvcmVzdHxlbnwwfHx8fDE3Nzg2OTkzMDB8MA&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwxfHxrZXJhbGElMjB0b3VyaXNtfGVufDB8fHx8MTc3ODY5OTMwMHww&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHw0fHxrZXJhbGElMjB0b3VyaXNtfGVufDB8fHx8MTc3ODY5OTMwMHww&ixlib=rb-4.1.0&q=85"
+    ]
+  },
+  "icon_strategy": {
+    "library": "lucide-react",
+    "style": "Subtle, minimalist, consistent stroke width. Use standard icons for navigation, WhatsApp, phone, mail, location."
+  },
+  "testing_rules": "All interactive elements, buttons, links, and form inputs MUST have descriptive data-testid attributes (e.g., data-testid='whatsapp-fab', data-testid='booking-submit-btn')."
+}
