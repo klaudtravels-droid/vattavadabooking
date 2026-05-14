@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --forest: #1a3a2a;
+  --forest-deep: #0d1f14;
+  --amber: #c8922a;
+  --parchment: #f5f0e8;
+  --charcoal: #2b2b2b;
+  --cream: #f0ece3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--charcoal);
+  background: var(--parchment);
+  overflow-x: hidden;
+}
+
+/* ===== MIST / FOG ANIMATION ===== */
+.mist-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.mist-1 {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255,255,255,0.08) 20%,
+    rgba(255,255,255,0.15) 50%,
+    rgba(255,255,255,0.08) 80%,
+    transparent 100%
+  );
+  animation: mistDrift1 18s ease-in-out infinite;
+  opacity: 0.7;
+}
+
+.mist-2 {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255,255,255,0.05) 30%,
+    rgba(255,255,255,0.12) 60%,
+    rgba(255,255,255,0.05) 90%,
+    transparent 100%
+  );
+  animation: mistDrift2 24s ease-in-out infinite;
+  opacity: 0.5;
+  animation-delay: -6s;
+}
+
+.mist-3 {
+  background: radial-gradient(
+    ellipse at 30% 80%,
+    rgba(255,255,255,0.2) 0%,
+    transparent 70%
+  );
+  animation: mistDrift3 30s ease-in-out infinite;
+  opacity: 0.4;
+  animation-delay: -12s;
+}
+
+@keyframes mistDrift1 {
+  0%, 100% { transform: translateX(-15%) scaleY(1); }
+  50% { transform: translateX(15%) scaleY(1.1); }
+}
+
+@keyframes mistDrift2 {
+  0%, 100% { transform: translateX(10%) translateY(-5%); }
+  50% { transform: translateX(-20%) translateY(5%); }
+}
+
+@keyframes mistDrift3 {
+  0%, 100% { transform: translateX(-5%) scale(1); }
+  33% { transform: translateX(10%) scale(1.15); }
+  66% { transform: translateX(-10%) scale(0.95); }
+}
+
+/* ===== GRAIN TEXTURE OVERLAY ===== */
+.grain-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 128px 128px;
+}
+
+/* ===== SCROLL REVEAL ANIMATION ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+
+/* ===== WHATSAPP PULSE ===== */
+@keyframes waPulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+  70% { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+.wa-pulse {
+  animation: waPulse 2.5s infinite;
+}
+
+/* ===== NAVBAR TRANSITION ===== */
+.navbar-scrolled {
+  background: rgba(245, 240, 232, 0.85) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(26, 58, 42, 0.08);
+}
+
+.navbar-scrolled .nav-link {
+  color: var(--charcoal) !important;
+}
+
+.navbar-scrolled .nav-logo {
+  color: var(--forest) !important;
+}
+
+/* ===== CUSTOM SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--parchment);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--forest);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #245438;
+}
+
+/* ===== IMAGE HOVER ZOOM ===== */
+.img-zoom {
+  overflow: hidden;
+}
+
+.img-zoom img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.img-zoom:hover img {
+  transform: scale(1.08);
+}
+
+/* ===== COMING SOON BADGE ===== */
+.coming-soon-card {
+  position: relative;
+}
+
+.coming-soon-card::after {
+  content: 'Coming Soon';
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(13, 31, 20, 0.85);
+  color: var(--amber);
+  padding: 4px 14px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+}
+
+/* ===== FORM STYLES ===== */
+.form-input {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1.5px solid rgba(26, 58, 42, 0.15);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.6);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  color: var(--charcoal);
+  transition: border-color 0.3s, box-shadow 0.3s;
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: var(--forest);
+  box-shadow: 0 0 0 3px rgba(26, 58, 42, 0.08);
+}
+
+.form-input::placeholder {
+  color: #999;
+}
+
+/* ===== HERO TEXT SHADOW ===== */
+.hero-text-shadow {
+  text-shadow: 0 2px 40px rgba(0,0,0,0.5);
+}
+
+/* ===== SELECTION COLOR ===== */
+::selection {
+  background: var(--forest);
+  color: var(--cream);
+}
