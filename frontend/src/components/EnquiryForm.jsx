@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Send } from 'lucide-react';
 
-const STAY_TYPES = ['Pool Property', 'Budget Property', 'Premium Property', 'Tents', 'Dormitory'];
+const STAY_TYPES = ['Pool Property', 'Budget Property', 'Premium Property', 'Tents', 'Dormitory', 'Dome Stay', 'A-Frame Cabin'];
 
 export default function EnquiryForm() {
   const [form, setForm] = useState({

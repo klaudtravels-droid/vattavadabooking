@@ -1,5 +1,5 @@
 import React from 'react';
-import { Waves, Wallet, Star, Tent, BedDouble } from 'lucide-react';
+import { Waves, Wallet, Star, Tent, BedDouble, CircleDot, Triangle } from 'lucide-react';
 
 const STAYS = [
   {
@@ -32,6 +32,18 @@ const STAYS = [
     icon: BedDouble,
     img: 'https://images.unsplash.com/photo-1709805619372-40de3f158e83?crop=entropy&cs=srgb&fm=jpg&ixid=M3w8NjAzMzJ8MHwxfHNlYXJjaHwxfHxkb3JtaXRvcnklMjBiZWRzJTIwdHJhdmVsfGVufDB8fHx8MTc3ODY5OTI4MHww&ixlib=rb-4.1.0&q=85',
   },
+  {
+    type: 'Dome Stay',
+    desc: 'A futuristic escape wrapped in nature. Transparent domes with panoramic views of the misty hills.',
+    icon: CircleDot,
+    img: 'https://images.unsplash.com/photo-1641569618527-68e26db76db0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwzfHxnZW9kZXNpYyUyMGRvbWUlMjBzdGF5JTIwbmF0dXJlJTIwZ2xhbXBpbmd8ZW58MHx8fHwxNzc4NzgxMTczfDA&ixlib=rb-4.1.0&q=85',
+  },
+  {
+    type: 'A-Frame Cabin',
+    desc: 'Cozy alpine-style cabins nestled in the forest. Rustic charm meets modern comfort in the highlands.',
+    icon: Triangle,
+    img: 'https://images.unsplash.com/photo-1570793005386-840846445fed?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTN8MHwxfHNlYXJjaHwxfHxBLWZyYW1lJTIwY2FiaW4lMjBmb3Jlc3QlMjBtb3VudGFpbnN8ZW58MHx8fHwxNzc4NzgxMTczfDA&ixlib=rb-4.1.0&q=85',
+  },
 ];
 
 export default function Stays() {
@@ -49,7 +61,7 @@ export default function Stays() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {STAYS.map((stay, idx) => {
             const Icon = stay.icon;
             return (
@@ -57,9 +69,7 @@ export default function Stays() {
                 key={stay.type}
                 href="#booking"
                 onClick={(e) => { e.preventDefault(); document.querySelector('#booking')?.scrollIntoView({ behavior: 'smooth' }); }}
-                className={`group reveal reveal-delay-${idx + 1} rounded-2xl overflow-hidden bg-white shadow-[0_4px_24px_rgba(26,58,42,0.06)] hover:shadow-[0_8px_40px_rgba(26,58,42,0.12)] transition-all duration-500 cursor-pointer ${
-                  idx >= 3 ? 'sm:col-span-1 lg:col-span-1' : ''
-                }`}
+                className={`group reveal reveal-delay-${(idx % 5) + 1} rounded-2xl overflow-hidden bg-white shadow-[0_4px_24px_rgba(26,58,42,0.06)] hover:shadow-[0_8px_40px_rgba(26,58,42,0.12)] transition-all duration-500 cursor-pointer`}
                 data-testid={`stay-card-${stay.type.toLowerCase().replace(/\s/g, '-')}`}
               >
                 <div className="img-zoom h-48 overflow-hidden relative">
