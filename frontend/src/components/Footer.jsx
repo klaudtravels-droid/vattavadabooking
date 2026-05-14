@@ -33,7 +33,9 @@ export default function Footer() {
             </p>
             <div className="flex gap-3">
               <a
-                href="#"
+                href="https://instagram.com/klaudvalleytravels"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/8 flex items-center justify-center hover:bg-amber/20 transition-colors duration-300"
                 data-testid="footer-instagram"
                 aria-label="Instagram"
@@ -41,7 +43,9 @@ export default function Footer() {
                 <Instagram size={18} className="text-cream/60 hover:text-amber" />
               </a>
               <a
-                href="#"
+                href="https://facebook.com/klaudvalleytravels"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/8 flex items-center justify-center hover:bg-amber/20 transition-colors duration-300"
                 data-testid="footer-facebook"
                 aria-label="Facebook"
