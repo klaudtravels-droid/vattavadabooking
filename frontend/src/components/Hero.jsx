@@ -63,6 +63,30 @@ export default function Hero() {
         </div>
       </div>
 
+      {/* Social Icons */}
+      <div className="absolute bottom-24 left-1/2 -translate-x-1/2 flex items-center gap-4 reveal reveal-delay-5">
+        <a
+          href="https://instagram.com/klaudvalleytravels"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-amber/25 transition-all duration-300 group"
+          data-testid="hero-instagram"
+          aria-label="Instagram"
+        >
+          <Instagram size={18} className="text-cream/70 group-hover:text-amber transition-colors duration-300" />
+        </a>
+        <a
+          href="https://facebook.com/klaudvalleytravels"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-amber/25 transition-all duration-300 group"
+          data-testid="hero-facebook"
+          aria-label="Facebook"
+        >
+          <Facebook size={18} className="text-cream/70 group-hover:text-amber transition-colors duration-300" />
+        </a>
+      </div>
+
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
         <ChevronDown size={28} className="text-cream/60" />
