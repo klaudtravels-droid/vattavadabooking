@@ -33,6 +33,12 @@ Build a production-ready travel agency landing page for Klaud Valley Travels, a 
 - Root cause: IntersectionObserver only observed elements on mount, not dynamically rendered tab content
 - Fix: Added MutationObserver in App.js + React state-driven fade animation in Destinations.jsx
 
+## Feature Addition (Jan 14, 2026)
+- Added 2 new accommodation types: **Dome Stay** and **A-Frame Cabin**
+- Updated Stays section (now 7 cards total) with images and descriptions
+- Updated Enquiry Form dropdown to include both new stay types
+- Grid adjusted to xl:grid-cols-4 for balanced layout
+
 ## Backlog
 - P0: None
 - P1: Social media links (Instagram, Facebook) - user will provide later
