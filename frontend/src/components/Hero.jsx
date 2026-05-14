@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Instagram, Facebook } from 'lucide-react';
 
 const HERO_BG = 'https://images.unsplash.com/photo-1686376351261-7a1d6e6e2939?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MTJ8MHwxfHNlYXJjaHwxfHxLZXJhbGElMjBoaWxscyUyMHZhbGxleSUyMG1pc3QlMjBtb3VudGFpbnN8ZW58MHx8fHwxNzc4Njk5NDAyfDA&ixlib=rb-4.1.0&q=85';
 
